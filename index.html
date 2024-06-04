@@ -27,31 +27,13 @@
       <div class="frontpage" id="section">
         <button id="startButton">Start</button>
       </div>
-  
-    <div class="home-container">
-        <div class="intro-text">
-            <h1>Welcome to the Sound Project</h1>
-            <p>This project is an exploration of sound and its impact on our perception. Click the button to start the journey and experience the sounds we've curated for you.</p>
-        </div>
-        <div class="start-button-container">
-            <button class="glowing-button" onclick="handleStartClick()">Start</button>
-        </div>
-    </div>
-    <script>
-        function playClickSound() {
-            const clickSound = new Audio('Audio/click.mp3');
-            clickSound.play();
-        }
 
-        function handleStartClick() {
-            playClickSound();
-            setTimeout(() => {
-                location.href = 'audio.html';
-            }, 200); // Delay to ensure sound plays
-        }
-    </script>
-
-  
+      <!-- Audio element -->
+      <audio id="backgroundAudio">
+          <source src="your_audio_file.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+      </audio>
+   
     </div>
 
 </body>
