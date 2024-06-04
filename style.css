@@ -281,6 +281,20 @@ button i {
   transform: translateX(-40%);
 }
 
+#section {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Set the height of the section to full viewport height */
+}
+
+#startButton img {
+    width: 100px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    filter: brightness(50%); /* Darken the image */
+}
+
+
 .main-menu-button:hover {
   background-color: #14004d;
 }
