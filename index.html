@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound Project Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-background">
+    <div class="home-container">
+        <div class="intro-text">
+            <h1>Welcome to the Sound Project</h1>
+            <p>This project is an exploration of sound and its impact on our perception. Click the button to start the journey and experience the sounds we've curated for you.</p>
+        </div>
+        <div class="start-button-container">
+            <button class="glowing-button" onclick="handleStartClick()">Start</button>
+        </div>
+    </div>
+    <script>
+        function playClickSound() {
+            const clickSound = new Audio('Audio/click.mp3');
+            clickSound.play();
+        }
+
+        function handleStartClick() {
+            playClickSound();
+            setTimeout(() => {
+                location.href = 'audio.html';
+            }, 200); // Delay to ensure sound plays
+        }
+    </script>
+</body>
+</html>

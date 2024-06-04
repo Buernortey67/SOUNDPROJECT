@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound Project Audio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="audio-background">
+    <div class="audio-container">
+        <div class="audio-content">
+            <audio id="sound" controls>
+                <source src="Audio/Morale.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="controls">
+                <button onclick="stopAudio()"><i class="fas fa-stop"></i></button>
+                <button onclick="rewindAudio()"><i class="fas fa-backward"></i></button>
+                <button onclick="forwardAudio()"><i class="fas fa-forward"></i></button>
+            </div>
+        </div>
+    </div>
+    <button class="main-menu-button" onclick="handleReturnClick()">Return to Main Menu</button>
+    <div class="voting-container" id="voting-section" style="display: none;">
+        <h1>What Happened in the Scene?</h1>
+        <form>
+            <input type="radio" id="scene1" name="scene" value="robbery">
+            <label for="scene1">Robbery</label><br>
+            <input type="radio" id="scene2" name="scene" value="argument">
+            <label for="scene2">Argument</label><br>
+            <input type="radio" id="scene3" name="scene" value="accident">
+            <label for="scene3">Accident</label><br>
+            <input type="radio" id="scene4" name="scene" value="other">
+            <label for="scene4">Other</label><br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        const sound = document.getElementById('sound');
+        const votingSection = document.getElementById('voting-section');
+
+        function stopAudio() {
+            sound.pause();
+            sound.currentTime = 0;
+        }
+
+        function rewindAudio() {
+            sound.currentTime -= 10;
+        }
+
+        function forwardAudio() {
+            sound.currentTime += 10;
+        }
+
+        function returnToMainMenu() {
+            location.href = 'index.html';
+        }
+
+        sound.addEventListener('ended', () => {
+            votingSection.style.display = 'block';
+            document.querySelector('.audio-container').style.display = 'none';
+            document.querySelector('.main-menu-button').style.display = 'none';
+        });
+
+        function playClickSound() {
+            const clickSound = new Audio('Audio/click.mp3');
+            clickSound.play();
+        }
+
+        function handleReturnClick() {
+            playClickSound();
+            setTimeout(() => {
+                returnToMainMenu();
+            }, 200); // Delay to ensure sound plays
+        }
+    </script>
+</body>
+</html>
