@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vote on the Scene</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Next Page</title>
+    <script src="script.js" defer></script>
 </head>
+
 <body>
+
     <div class="container">
-        <h1>What Happened in the Scene?</h1>
-        <form>
-            <input type="radio" id="scene1" name="scene" value="robbery">
-            <label for="scene1">Robbery</label><br>
-            <input type="radio" id="scene2" name="scene" value="argument">
-            <label for="scene2">Argument</label><br>
-            <input type="radio" id="scene3" name="scene" value="accident">
-            <label for="scene3">Accident</label><br>
-            <input type="radio" id="scene4" name="scene" value="other">
-            <label for="scene4">Other</label><br><br>
-            <button type="submit">Submit</button>
-        </form>
+
+        <!-- First Audio -->
+        <audio id="audio1" controls autoplay>
+            <source src="Audio/comm_lab_btn1.mp3" type="audio/mpeg">
+            
+        </audio>
+
+        <!-- Second Audio -->
+        <audio id="audio2" controls>
+            <source src="Audio/comm_lab_btn2.mp3" type="audio/mpeg">
+            
+        </audio>
+
     </div>
+
+    <script>
+        window.onload = function() {
+            const audio2 = document.getElementById('audio2');
+            audio2.play(); // Auto-play the second audio
+        };
+    </script>
+
 </body>
+
 </html>
+
