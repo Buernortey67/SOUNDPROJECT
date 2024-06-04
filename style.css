@@ -25,7 +25,6 @@ body::-webkit-scrollbar {
   height: 100%;
   align-items: center;
   color: #090137;
-  background-color: transparent;
   border-bottom-style: solid;
   border-bottom-color: rgb(40, 40, 78);
   scrollbar-width: none;  /* Hides scroll bars in Firefox */
@@ -288,12 +287,6 @@ button i {
   transform: translateX(-40%);
 }
 
-#section {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Set the height of the section to full viewport height */
-}
 
 #startButton img {
     width: 100px; /* Adjust width as needed */
