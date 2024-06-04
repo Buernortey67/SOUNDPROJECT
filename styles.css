@@ -57,7 +57,7 @@ body::-webkit-scrollbar {
 }
 
 .audio-background {
-  background-image: url('images/image2.jpg');
+  background-image: url('images/image.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -69,7 +69,7 @@ body::-webkit-scrollbar {
   flex-direction: column;
 }
 .behind-the-scenes-background {
-    background-image: url('images/image.jpg'); /* Set the background image */
+    background-image: url('images/BTS.jpg'); /* Set the background image */
     background-size: cover; /* Cover the entire element with the background image */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Do not repeat the background image */
