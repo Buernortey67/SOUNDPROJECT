@@ -248,6 +248,7 @@ body::-webkit-scrollbar {
   padding: 40px;
   border-radius: 10px;
   align-items: center;
+  border: none;
 }
 
 
