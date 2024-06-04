@@ -11,3 +11,10 @@ document.getElementById("startButton").addEventListener("click", function() {
     // Add your code here to handle what happens when the start button is clicked
     alert("The game is starting!");
 });
+
+document.getElementById("startButton").addEventListener("click", function() {
+    // Play audio when the button is clicked
+    var audio = document.getElementById("backgroundAudio");
+    audio.play();
+});
+
