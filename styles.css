@@ -25,17 +25,6 @@ body::-webkit-scrollbar {
   align-items: center;
 }
 
-/* Header */
-.topnav {
-  background-color: #000000;
-  top: 0;
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-  display: flex;
-  justify-content: center;  /* Center the links */
-  z-index: 1000;
-}
 
 /* Style for all the page boxes */
 #section {
