@@ -104,7 +104,7 @@ body::-webkit-scrollbar {
 .frontpage {
   display: flex;
   justify-content: center;
-  background-color: #7199ca;
+  background-color: #000000;
   background: #000000 url("images/bgimage.jpg") no-repeat center;
 }
 
