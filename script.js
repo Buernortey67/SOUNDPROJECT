@@ -92,8 +92,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
             
-            myfunc() {
+           function myfunc() {
             var myDiv = document.getElementById('myImage');
             myDiv.setAttribute('style', 'width: 200px; height: 200px; background-color: blue; display:none;');
-        });
+        };
 document.getElementById("myBtn").onclick = myfunc;
