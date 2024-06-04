@@ -89,3 +89,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }, clickSound.duration * 1000); // Wait for the click sound to finish playing
     });
 });
+
+
+            
+            myfunc() {
+            var myDiv = document.getElementById('myImage');
+            myDiv.setAttribute('style', 'width: 200px; height: 200px; background-color: blue; display:none;');
+        });
+document.getElementById("myBtn").onclick = myfunc;
