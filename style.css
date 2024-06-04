@@ -1,363 +1,273 @@
-
-/* Overall Body Style*/
+/* Overall Body Style */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #090137;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    scroll-behavior: smooth;
+  font-family: Arial, sans-serif;
+  background-color: #090137;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
-    display: none;  /* Hides scroll bars in WebKit browsers (Chrome, Safari) */
+  display: none;  /* Hides scroll bars in WebKit browsers (Chrome, Safari) */
 }
 
 .container {
-    height: 100vh;
+  height: 100vh;
 }
 
-
-/* Style for all the page boxes*/ 
+/* Style for all the page boxes */ 
 #section {
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    color: #090137;
-    border-bottom-style: solid;
-    border-bottom-color: rgb(40, 40, 78);
-    scrollbar-width: none;  /* Hides scroll bars in Firefox */
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  color: #090137;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(40, 40, 78);
+  scrollbar-width: none;  /* Hides scroll bars in Firefox */
 }
-
 
 /* Header */
-
 .topnav {
-    background-color: #000000;
-    overflow: hidden;
-    position: fixed;
-    width: 100%;
-    align-items: center;
-    z-index: 1000;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    align-items: center;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: rgb(27, 2, 2);
-  }
-  
-  /* Add an active class to highlight the current page */
-  .topnav a.active {
-    background-color: #ffffff;
-    color: black;
-  }
-  
-  /* Hide the link that should open and close the topnav on small screens */
-  .topnav .icon {
-    display: none;
+  background-color: #000000;
+  top: 0;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;  /* Center the links */
+}
+
+.topnav a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: rgb(27, 2, 2);
+}
+
+.topnav a.active {
+  background-color: #ffffff;
+  color: black;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav {
+      flex-direction: column;
   }
 
-  @media screen and (max-width: 600px) {
-    .topnav a:not(:first-child) {display: none;}
-    .topnav a.icon {
-      float: right;
+  .topnav a {
       display: block;
-    }
+      text-align: center;
   }
-  
-  @media screen and (max-width: 600px) {
-    .topnav.responsive {position: relative;}
-    .topnav.responsive .icon {
+
+  .topnav a.icon {
+      display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+      position: relative;
+  }
+
+  .topnav.responsive .icon {
       position: absolute;
       right: 0;
       top: 0;
-    }
-    .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
   }
 
+  .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: center;
+  }
+}
+
 /* First Page layout */
-
 .frontpage {
-    display: flex;
-    justify-content: center;
-    background-color: #7199ca;
-    background: #000000 url("images/bgimage.jpg") no-repeat center;
+  display: flex;
+  justify-content: center;
+  background-color: #7199ca;
+  background: #000000 url("images/bgimage.jpg") no-repeat center;
 }
 
-
-/* BTS scene*/
-
+/* BTS scene */
 .BTS {
-    display: flex;
-    justify-content: center;
-    align-items: center;  /* Center content vertically */
-    height: 100vh;  /* Ensure the parent container takes full height */
-    background-color: #090223;
-    font-family: Roboto;
-   
+  display: flex;
+  justify-content: center;
+  align-items: center;  /* Center content vertically */
+  height: 100vh;  /* Ensure the parent container takes full height */
+  background-color: #090223;
+  font-family: Roboto;
 }
-
-
 
 .BTS h3 {
-    text-align: center;
-    font-size: 50px;
-    color: #ffffff;
-    
+  text-align: center;
+  font-size: 50px;
+  color: #ffffff;
 }
 
 #video {
-    width:80%;
-    height: 60%;
-
+  width: 80%;
+  height: 60%;
 }
+
 .video-container {
-    position: relative;  /* Changed from absolute */
-    padding-bottom: 30%; /* 16:9 aspect ratio */
-    height: 0;  /* Set height to 0 */
-    overflow: hidden;
-    width: 50%;
-    background-color: #020220;
-    margin-bottom: 10%;
-    align-items: center;
-    margin: auto;
- }
- 
- /* Style for the iframe within the video container */
- .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    align-items: center;
- }
+  position: relative;  /* Changed from absolute */
+  padding-bottom: 40%; /* 16:9 aspect ratio */
+  height: 0;  /* Set height to 0 */
+  overflow: hidden;
+  width: 60%;
+  background-color: #020220;
+  margin-bottom: 10%;
+  align-items: center;
+  margin: auto;
+}
 
-
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
 
 /* Contact Style */
-
 .team-section {
-    margin-top: 5px;
-    display: flex;
-    flex-direction: column;  /* Stacks children vertically */
-    align-items: center;
-    text-align: center;
-    background-color: #0b0526;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;  /* Stacks children vertically */
+  align-items: center;
+  text-align: center;
+  background-color: #0b0526;
 }
 
 .team-members {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;  /* Ensure it takes the full width */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;  /* Ensure it takes the full width */
 }
 
 .team-member {
-    width: 10%;
-    padding: 30px;
-    background-color: #11115b;
-    border-radius: 10px;
-    margin: 20px;
-    box-shadow: 0 0 10px rgba(53, 14, 108, 0.1);
-    transition: transform 0.3s;
-    text-align: center;
-    align-items: center;
+  width: 10%;
+  padding: 30px;
+  background-color: #11115b;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(53, 14, 108, 0.1);
+  transition: transform 0.3s;
+  text-align: center;
+  align-items: center;
 }
 
 .team-member:hover {
-    transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 
 .team-member p {
-    font-size: 22px;
-    font-weight: bold;
-    font-family: 'Merriweather', serif;
-    color: #fff;
-    margin-bottom: 15px;
-    text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Merriweather', serif;
+  color: #fff;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 .contact-icons {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .contact-icons a {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    background-color: #fff;
-    border-radius: 50%;
-    margin: 0 10px;
-    transition: background-color 0.3s;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0 10px;
+  transition: background-color 0.3s;
 }
 
 .contact-icons a:hover {
-    background-color: #f1f1f1;
-    cursor: url('images/key_glow.png'), auto;
+  background-color: #f1f1f1;
+  cursor: url('images/key_glow.png'), auto;
 }
 
 .contact-icons img {
-    width: 24px;
-    height: 24px;
-    margin: 8px;
-    cursor: pointer;
+  width: 24px;
+  height: 24px;
+  margin: 8px;
+  cursor: pointer;
 }
-
-
-
-
-
 
 /* Audio file css */
-.home-background {
-    background-image: url('images/homeback.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-.home-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border: 1px solid #ccc;
-    background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 800px;
-}
-
-.intro-text {
-    flex: 1;
-    padding: 20px;
-}
-
-.start-button-container {
-    padding: 20px;
-}
-
-.glowing-button {
-    padding: 15px 30px;
-    font-size: 18px;
-    color: #fff;
-    background-color: #007BFF;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
-    transition: box-shadow 0.3s, transform 0.3s;
-}
-
-.glowing-button:hover {
-    box-shadow: 0 0 30px rgba(0, 123, 255, 0.7);
-    transform: scale(1.05);
-}
-
-.audio-background {
-    background-image: url('images/image2.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 
 .home-container, .audio-container, .voting-container {
-    text-align: center;
-    padding: 20px;
-    border: 1px solid #ccc;
-    background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .audio-container {
-    padding: 40px;
-    border-radius: 10px;
+  padding: 40px;
+  border-radius: 10px;
 }
 
-.voting-container {
-    margin-top: 20px;
-    padding: 40px;
-    border-radius: 10px;
-    text-align: center;
-}
 
 .controls {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 button {
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
-    border: none;
-    background-color: #007BFF;
-    color: #fff;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: #007BFF;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
+  background-color: #0056b3;
+  transform: scale(1.05);
 }
 
 button i {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 .main-menu-button {
-    background-color: #28a745;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+  background-color: #040fa7;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-40%);
 }
 
 .main-menu-button:hover {
-    background-color: #218838;
-/* Style for the start button */
-#startButton {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 8px;
+  background-color: #14004d;
 }
-
