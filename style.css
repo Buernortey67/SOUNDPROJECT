@@ -302,3 +302,16 @@ button i {
 .main-menu-button:hover {
   background-color: #14004d;
 }
+
+.behind-the-scenes-background {
+    background-image: url('images/BTS.jpg'); /* Set the background image */
+    background-size: cover; /* Cover the entire element with the background image */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    width: 100%; /* Set the width to 100% */
+    height: 100vh; /* Set the height to 100% of the viewport height */
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    flex-direction: column; /* Arrange the flex items in a column */
+}
