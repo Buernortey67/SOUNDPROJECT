@@ -7,6 +7,18 @@ function myFunction() {
     }
   }
 
+document.getElementById("startButton").addEventListener("click", function() {
+    var clickSound = document.getElementById("clickSound");
+    clickSound.play(); // Play click sound
+    
+    // Add a delay before playing the background audio
+    setTimeout(function() {
+        var backgroundAudio = document.getElementById("backgroundAudio");
+        backgroundAudio.play(); // Play background audio
+    }, clickSound.duration * 1000); // Wait for the click sound to finish playing
+});
+
+
 // Add functionality to the start button
 document.getElementById("startButton").addEventListener("click", function() {
     console.log("Start button clicked!"); // Check if the event listener is triggered
