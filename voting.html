@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vote on the Scene</title>
+    <title>Updates on the Incident</title>
     <link rel="stylesheet" href="style.css">
     <style>
         /* Styling for the container */
         .container {
-            background-image: url('images/image2.jpg'); 
+            background-image: url('path/to/background_image.jpg'); /* Replace 'path/to/background_image.jpg' with the actual path to your background image */
             background-size: cover;
             background-position: center;
             height: 100vh;
@@ -21,95 +21,35 @@
         }
 
         /* Styling for the header */
-        .topnav {
-            background-color: #000000;
-            top: 0;
-            overflow: hidden;
-            position: fixed;
-            width: 100%;
-            align-items: center;
-            z-index: 1000;
-            display: flex;
-            justify-content: center; /* Center the links */
+        h1 {
+            font-size: 36px; /* Larger font size */
+            font-weight: bold; /* Bold font weight */
+            color: #ffffff; /* White text color */
         }
 
-        .topnav a {
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
+        form {
+            margin-top: 20px; /* Add some space between the heading and the form */
+            text-align: center; /* Center-align the form */
         }
 
-        .topnav a:hover {
-            background-color: #ddd;
-            color: rgb(27, 2, 2);
-        }
-
-        .topnav a.active {
-            background-color: #ffffff;
-            color: black;
-        }
-
-        .topnav .icon {
-            display: none;
-        }
-
-        @media screen and (max-width: 600px) {
-            .topnav {
-                flex-direction: column;
-            }
-
-            .topnav a {
-                display: block;
-                text-align: center;
-            }
-
-            .topnav a.icon {
-                display: block;
-            }
-        }
-
-        @media screen and (max-width: 600px) {
-            .topnav.responsive {
-                position: relative;
-            }
-
-            .topnav.responsive .icon {
-                position: absolute;
-                right: 0;
-                top: 0;
-            }
-
-            .topnav.responsive a {
-                float: none;
-                display: block;
-                text-align: center;
-            }
+        label {
+            font-size: 18px; /* Larger font size for the labels */
+            font-weight: bold; /* Bold font weight */
+            color: #ffffff; /* White text color */
+            margin-bottom: 10px; /* Add some space between the labels */
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="topnav" id="myTopnav">
-            <a href="index.html">Home</a>
-            <a href="audio.html" class="active">Audio</a>
-            <a href="finalpage.html">Behind The Scenes</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
-
-        <h1>What Happened in the Scene?</h1>
+        <h1>UPDATES ON THE INCIDENT</h1>
         <form>
             <!-- Audio 1 option -->
             <input type="radio" id="scene1" name="scene" value="audio1" onclick="playAudio('audio1')">
             <label for="scene1">Update 1</label><br>
             <audio id="audio1" controls>
                 <source src="Audio/comm_lab_btn1.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
             </audio><br>
 
             <!-- Audio 2 option -->
@@ -120,7 +60,6 @@
                 Your browser does not support the audio element.
             </audio><br>
 
-            <button type="submit">Submit</button>
         </form>
     </div>
 
@@ -134,3 +73,4 @@
 </body>
 
 </html>
+
