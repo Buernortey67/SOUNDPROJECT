@@ -66,14 +66,26 @@ document.getElementById("startButton").addEventListener("click", function() {
 
         
 document.addEventListener('DOMContentLoaded', function() {
+    const startButton = document.getElementById('startButton');
     const img = document.getElementById('myImage');
 
-    img.addEventListener('click', function() {
+    startButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default action if needed
         img.classList.add('fade-out');
 
         // Remove the image from the DOM after the animation completes
         setTimeout(function() {
             img.remove();
         }, 1000); // 1000ms matches the CSS transition duration
+
+        // Play click sound
+        var clickSound = document.getElementById("clickSound");
+        clickSound.play(); // Play click sound
+        
+        // Add a delay before playing the background audio
+        setTimeout(function() {
+            var backgroundAudio = document.getElementById("backgroundAudio");
+            backgroundAudio.play(); // Play background audio
+        }, clickSound.duration * 1000); // Wait for the click sound to finish playing
     });
 });
