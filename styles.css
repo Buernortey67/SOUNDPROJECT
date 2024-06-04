@@ -36,7 +36,7 @@ body::-webkit-scrollbar {
   align-items: center;
   color: #090137;
   border-bottom-style: solid;
-  border-bottom-color: rgb(40, 40, 78);
+  border-bottom-color: transparent;
   scrollbar-width: none;  /* Hides scroll bars in Firefox */
 }
 
