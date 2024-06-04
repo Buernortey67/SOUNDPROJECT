@@ -7,8 +7,12 @@ function myFunction() {
     }
   }
 
-
-
+// Add functionality to the start button
+document.getElementById("startButton").addEventListener("click", function() {
+    console.log("Start button clicked!"); // Check if the event listener is triggered
+    var audio = document.getElementById("backgroundAudio");
+    audio.play();
+});
 
   const sound = document.getElementById('sound');
         const votingSection = document.getElementById('voting-section');
