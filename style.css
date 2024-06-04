@@ -121,6 +121,8 @@ body::-webkit-scrollbar {
   text-align: center;
   font-size: 50px;
   color: #ffffff;
+  margin-bottom: 20px;  /* Adjust the space below the heading */
+  margin-top: -30px;  /* Adjust this value to move the heading upwards */
 }
 
 #video {
