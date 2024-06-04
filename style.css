@@ -112,7 +112,7 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: center;
   align-items: center;  /* Center content vertically */
-  height: 100vh;  /* Ensure the parent container takes full height */
+  height: 80vh;  /* Ensure the parent container takes full height */
   background-color: #090223;
   font-family: Roboto;
 }
@@ -124,7 +124,7 @@ body::-webkit-scrollbar {
 }
 
 #video {
-  width: 80%;
+  width: 60%;
   height: 60%;
 }
 
@@ -167,6 +167,10 @@ body::-webkit-scrollbar {
 }
 
 .team-member {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 10%;
   padding: 30px;
   background-color: #11115b;
@@ -175,11 +179,6 @@ body::-webkit-scrollbar {
   box-shadow: 0 0 10px rgba(53, 14, 108, 0.1);
   transition: transform 0.3s;
   text-align: center;
-  align-items: center;
-}
-
-.team-member:hover {
-  transform: translateY(-10px);
 }
 
 .team-member p {
@@ -190,6 +189,11 @@ body::-webkit-scrollbar {
   margin-bottom: 15px;
   text-align: center;
 }
+
+.team-member:hover {
+  transform: translateY(-10px);
+}
+
 
 .contact-icons {
   display: flex;
@@ -226,7 +230,7 @@ body::-webkit-scrollbar {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100%;
+    width: auto;
     height: 100vh;
     display: flex;
     justify-content: center;
