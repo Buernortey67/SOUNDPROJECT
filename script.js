@@ -14,7 +14,7 @@ document.getElementById("startButton").addEventListener("click", function() {
 
 document.getElementById("startButton").addEventListener("click", function() {
     // Play audio when the button is clicked
-    var audio = document.getElementById("backgroundAudio");
+    var audio = document.getElementById("NewsIntro");
     audio.play();
 });
 
