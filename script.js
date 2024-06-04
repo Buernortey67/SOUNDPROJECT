@@ -73,3 +73,16 @@ document.getElementById("startButton").addEventListener("click", function() {
               x.className = "topnav";
           }
       }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const img = document.getElementById('myImage');
+
+    img.addEventListener('click', function() {
+        img.classList.add('fade-out');
+
+        // Remove the image from the DOM after the animation completes
+        setTimeout(function() {
+            img.remove();
+        }, 1000); // 1000ms matches the CSS transition duration
+    });
+});
