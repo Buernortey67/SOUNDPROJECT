@@ -121,7 +121,7 @@ body::-webkit-scrollbar {
   text-align: center;
   font-size: 50px;
   color: #ffffff;
-  margin-bottom: 10px;  /* Adjust the space below the heading */
+  margin-bottom: 20px;  /* Adjust the space below the heading */
   margin-top: -20px;  /* Adjust this value to move the heading upwards */
 }
 
