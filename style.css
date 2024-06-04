@@ -299,7 +299,7 @@ button i {
   background-color: #14004d;
 }
 
-.behind-the-scenes-background {
+/* .behind-the-scenes-background {
     background-image: url('images/BTS.jpg'); /* Set the background image */
     background-size: cover; /* Cover the entire element with the background image */
     background-position: center; /* Center the background image */
@@ -310,7 +310,7 @@ button i {
     justify-content: center; /* Center the content horizontally */
     align-items: center; /* Center the content vertically */
     flex-direction: column; /* Arrange the flex items in a column */
-}
+} */
 
 
 #myImage {
