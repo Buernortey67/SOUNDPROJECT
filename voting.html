@@ -4,36 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Next Page</title>
-    <script src="script.js" defer></script>
+    <title>Vote on the Scene</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
     <div class="container">
+        <h1>Updates on what Happened in the Scene?</h1>
+        <form>
+            <!-- Audio 1 option -->
+            <input type="radio" id="scene1" name="scene" value="audio1" onclick="playAudio('audio1')">
+            <label for="scene1">Audio 1</label><br>
+            <audio id="audio1" controls>
+                <source src="Audio/comm_lab_btn1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio><br>
 
-        <!-- First Audio -->
-        <audio id="audio1" controls autoplay>
-            <source src="Audio/comm_lab_btn1.mp3" type="audio/mpeg">
-            
-        </audio>
+            <!-- Audio 2 option -->
+            <input type="radio" id="scene2" name="scene" value="audio2" onclick="playAudio('audio2')">
+            <label for="scene2">Audio 2</label><br>
+            <audio id="audio2" controls>
+                <source src="Audio/comm_lab_btn2.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio><br>
 
-        <!-- Second Audio -->
-        <audio id="audio2" controls>
-            <source src="Audio/comm_lab_btn2.mp3" type="audio/mpeg">
-            
-        </audio>
-
+            <button type="submit">Submit</button>
+        </form>
     </div>
 
     <script>
-        window.onload = function() {
-            const audio2 = document.getElementById('audio2');
-            audio2.play(); // Auto-play the second audio
-        };
+        // JavaScript function to play audio
+        function playAudio(audioId) {
+            const audioElement = document.getElementById(audioId);
+            audioElement.play();
+        }
     </script>
-
 </body>
 
 </html>
+
 
