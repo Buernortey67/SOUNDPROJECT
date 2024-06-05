@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Last Page</title>
-    <link rel="stylesheet" href="style.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
     <style>
@@ -21,6 +21,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            overflow: hidden; /* To prevent scrollbars */
         }
 
         /* Additional styling for the container */
@@ -29,6 +30,7 @@
             max-width: 800px; /* Adjust as needed */
             padding: 20px;
             box-sizing: border-box;
+            z-index: 1; /* Ensure the container stays above the background */
         }
 
         /* Styling for the top navigation */
@@ -103,8 +105,8 @@
         /* Styling for the team section */
         .team-section {
             text-align: center;
-            margin-top: 50px; /* Add space between header and video */
-            margin-bottom: 50px; /* Add space between video and footer */
+            margin-top: 100px; /* Increased gap between header and footer */
+            margin-bottom: 100px; /* Increased gap between header and footer */
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
             width: 100%;
@@ -246,7 +248,6 @@
     </div>
 
     <footer>
-        <!-- Add any footer content here -->
         <p>© 2024 All Rights Reserved</p>
     </footer>
 
