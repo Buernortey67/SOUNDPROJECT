@@ -159,6 +159,11 @@ body::-webkit-scrollbar {
   height: 100%;
 }
 
+.team-member img{
+  width:100%;
+  height:100%;
+}
+
 /* Contact Style */
 .team-section {
   margin-top: 5px;
