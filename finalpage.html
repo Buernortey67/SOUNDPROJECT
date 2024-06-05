@@ -5,24 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Last Page</title>
+    
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
     <style>
-        /* Overall Body Style */
+        /* Styling for the background image */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #090137;
+            background-image: url('images/BTS.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
             margin: 0;
             padding: 0;
-            height: 100vh;
-            width: 100%;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            scroll-behavior: smooth;
+            overflow: auto; /* Allow scrolling */
         }
 
-        /* Header */
+        /* Styling for the top navigation */
         .topnav {
             background-color: #000000;
             top: 0;
@@ -91,133 +93,85 @@
             }
         }
 
-        /* BTS scene */
-        .BTS {
-            display: flex;
-            justify-content: center;
-            align-items: center;  /* Center content vertically */
-            height: 80vh;  /* Ensure the parent container takes full height */
-            background-color: #090223;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        .BTS h1 {
-            text-align: center;
-            font-size: 50px;
-            color: #ffffff;
-            margin-bottom: 20px;  /* Adjust the space below the heading */
-            margin-top: -20px;  /* Adjust this value to move the heading upwards */
-        }
-
+        /* Styling for the video section */
         #video {
-            width: 60%;
-            height: 60%;
+            margin-top: 100px; /* Adjust the gap between header and video */
+            text-align: center;
         }
 
         .video-container {
-            position: relative;
-            padding-bottom: 40%; /* 16:9 aspect ratio */
-            height: 0;  /* Set height to 0 */
+            width: 80%;
+            height: 400px; /* Adjust the video height as needed */
             overflow: hidden;
-            width: 60%;
-            background-color: transparent;
-            margin-bottom: 10%;
-            margin: auto;
+            position: relative;
         }
 
         .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
+            border: none; /* Remove border around video */
         }
 
-        /* Team section */
-        .team-section {
-            margin-top: 5px;
-            display: flex;
-            flex-direction: column;  /* Stacks children vertically */
-            align-items: center;
-            text-align: center;
-            background-color: transparent;
-        }
-
-        .team-members {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            width: 100%;  /* Ensure it takes the full width */
-        }
-
-        .team-member {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 10%;
-            padding: 30px;
-            background-color: #11115b;
-            border-radius: 10px;
-            margin: 20px;
-            box-shadow: 0 0 10px rgba(53, 14, 108, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .team-member p {
-            font-size: 22px;
-            font-weight: bold;
-            font-family: 'Roboto', sans-serif;
-            color: #fff;
-            margin-bottom: 15px;
-        }
-
-        .team-member img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .team-member:hover {
-            transform: translateY(-10px);
-        }
-
-        .contact-icons {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .contact-icons a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background-color: #fff;
-            border-radius: 50%;
-            margin: 0 10px;
-            transition: background-color 0.3s;
-        }
-
-        .contact-icons a:hover {
-            background-color: #f1f1f1;
-            cursor: pointer;
-        }
-
-        .contact-icons img {
-            width: 24px;
-            height: 24px;
-            margin: 8px;
-            cursor: pointer;
-        }
-
-        /* Footer */
+        /* Styling for the footer */
         footer {
             width: 100%;
             background-color: #000000;
             color: #ffffff;
             text-align: center;
             padding: 20px;
+            margin-top: 100px; /* Adjust the gap between video and footer */
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Styling for the team section */
+        .team-section {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .team-members {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px; /* Add space between header and team members */
+            margin-bottom: 20px; /* Add space between team members and footer */
+        }
+
+        .team-member {
+            width: 100px; /* Adjust as needed */
+            margin-bottom: 20px; /* Adjust as needed */
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .team-member p {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #ffffff;
+        }
+
+        .contact-icons {
+            margin-top: 10px; /* Adjust as needed */
+        }
+
+        .contact-icons a {
+            margin-right: 10px;
+        }
+
+        .contact-icons img {
+            width: 20px; /* Adjust as needed */
+            height: auto;
         }
     </style>
 </head>
@@ -233,14 +187,9 @@
         </a>
     </div>
 
-    <div class="container">
-        <div class="BTS" id="section">
-            <h1>Behind The Scenes</h1>
-            <section id="video">
-                <div class="video-container">
-                    <iframe src="https://drive.google.com/file/d/1IGzdrB4UDW8M6qJQ8oo4zzuXg49Na44p/preview" width="100%" height="100%" allow="autoplay" allowfullscreen></iframe>
-                </div>
-            </section>
+    <div id="video">
+        <div class="video-container">
+            <iframe src="https://drive.google.com/file/d/1IGzdrB4UDW8M6qJQ8oo4zzuXg49Na44p/preview" width="100%" height="100%" allow="autoplay" allowfullscreen></iframe>
         </div>
     </div>
 
