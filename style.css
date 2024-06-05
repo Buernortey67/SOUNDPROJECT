@@ -131,8 +131,8 @@ body::-webkit-scrollbar {
   text-align: center;
   font-size: 50px;
   color: #ffffff;
-  margin-bottom: 20px;  /* Adjust the space below the heading */
-  margin-top: -20px;  /* Adjust this value to move the heading upwards */
+  margin-bottom: 20px; 
+  margin-top: -20px;  
 }
 
 #video {
@@ -142,8 +142,8 @@ body::-webkit-scrollbar {
 
 .video-container {
   position: relative;
-  padding-bottom: 40%; /* 16:9 aspect ratio */
-  height: 0;  /* Set height to 0 */
+  padding-bottom: 40%; 
+  height: 0;  
   overflow: hidden;
   width: 60%;
   background-color: transparent;
@@ -168,7 +168,7 @@ body::-webkit-scrollbar {
 .team-section {
   margin-top: 5px;
   display: flex;
-  flex-direction: column;  /* Stacks children vertically */
+  flex-direction: column;  
   align-items: center;
   text-align: center;
   background-color: transparent;
@@ -297,8 +297,8 @@ button i {
 }
 
 #startButton img {
-  width: 100px; /* Adjust width as needed */
-  height: auto; /* Maintain aspect ratio */
+  width: 100px; 
+  height: auto; 
   filter: brightness(50%); /* Darken the image */
 }
 
