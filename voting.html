@@ -94,18 +94,37 @@
             font-size: 36px; /* Larger font size */
             font-weight: bold; /* Bold font weight */
             color: #ffffff; /* White text color */
+            margin-bottom: 20px; /* Add space below the header */
+            display: block;
         }
 
-        form {
-            margin-top: 20px; /* Add some space between the heading and the form */
-            text-align: center; /* Center-align the form */
-        }
-
-        label {
-            font-size: 18px; /* Larger font size for the label */
+        .updates-text {
+            display: none; /* Hide by default */
+            font-size: 24px; /* Font size for the "UPDATES" text */
             font-weight: bold; /* Bold font weight */
             color: #ffffff; /* White text color */
-            margin-bottom: 10px; /* Add some space between the label and the audio player */
+            margin-top: 20px; /* Add space above the text */
+        }
+
+        .options-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .option {
+            margin: 0 10px; /* Add space between options */
+            padding: 10px 20px; /* Increase padding for better clickability */
+            background-color: #ffffff; /* White background */
+            border: 2px solid #000000; /* Black border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+        }
+
+        .option:hover {
+            background-color: #000000; /* Dark background on hover */
+            color: #ffffff; /* White text on hover */
         }
     </style>
 </head>
@@ -121,23 +140,35 @@
     </div>
 
     <div class="container">
-        <h1>UPDATES ON THE INCIDENT</h1>
-        <form>
-            <!-- Audio option -->
-            <input type="radio" id="scene1" name="scene" value="updates" onclick="playAudio('updates_audio')">
-            <label for="scene1">Updates</label><br>
-            <audio id="updates_audio" controls>
-                <source src="Audio/comm_lab_btn1.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio><br>
-        </form>
+        <h1 id="header">WHO WAS SHOT?</h1>
+        <div class="updates-text" id="updatesText">UPDATES</div> <!-- Placeholder for "UPDATES" text -->
+        <div class="options-container" id="optionsContainer">
+            <div class="option" onclick="playAudio('comm_lab_btn1.mp3')">Cashier</div>
+            <div class="option" onclick="playAudio('comm_lab_btn2.mp3')">Thief</div>
+        </div>
+        <audio id="audioElement" controls style="display: none;"></audio> <!-- Hidden audio element -->
     </div>
 
     <script>
-        // JavaScript function to play audio
-        function playAudio(audioId) {
-            const audioElement = document.getElementById(audioId);
+        function playAudio(audioSrc) {
+            const audioElement = document.getElementById('audioElement');
+            const updatesText = document.getElementById('updatesText');
+            const header = document.getElementById('header');
+            
+            audioElement.src = 'Audio/' + audioSrc;
             audioElement.play();
+
+            // Hide options and show "UPDATES" text after an answer is chosen
+            document.getElementById('optionsContainer').style.display = 'none';
+            updatesText.style.display = 'block';
+            header.style.display = 'none';
+            
+            // Show options and hide "UPDATES" text again after audio finishes playing
+            audioElement.addEventListener('ended', function() {
+                document.getElementById('optionsContainer').style.display = 'flex';
+                updatesText.style.display = 'none';
+                header.style.display = 'block';
+            });
         }
     </script>
 </body>
