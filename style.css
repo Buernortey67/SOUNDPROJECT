@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 /* Overall Body Style */
 body {
   font-family: Arial, sans-serif;
@@ -23,6 +24,34 @@ body::-webkit-scrollbar {
   flex-direction: column;  /* Align items vertically */
   justify-content: center;
   align-items: center;
+}
+.Home {
+  width:100vw;
+  height: 100vh;
+  background: url(/images/bgimage.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.Description{
+  color:white;
+  position:absolute;
+  width:40vw;
+  top:50%;
+  left:10%;
+  line-height: 4vh;
+  font-family: "Ubuntu", sans-serif;
+}
+.Description p{
+  font-size:calc(1.0vh + 1.0vw);
+}
+.Home::before {
+  content: ''; /* Insert an empty content before the element */
+  background-color: rgba(0, 0, 0, 0.49); /* Set a semi-transparent black background */
+  width: 100vw; /* Cover the entire viewport width */
+  height: 100vh; /* Cover the entire viewport height */
+  position: absolute; /* Position the element absolutely within its container */
+  z-index: 0; /* Set the stacking order below other elements */
 }
 
 /* Style for all the page boxes */ 
@@ -88,25 +117,6 @@ body::-webkit-scrollbar {
       display: block;
   }
 }
-
-@media screen and (max-width: 600px) {
-  .topnav.responsive {
-      position: relative;
-  }
-
-  .topnav.responsive .icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-  }
-
-  .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: center;
-  }
-}
-
 /* First Page layout */
 .frontpage {
   display: flex;
@@ -313,4 +323,51 @@ button i {
 
 #myImage.fade-out {
   opacity: 0;
+}
+#startButton{
+  position:absolute;
+  top:70%;
+  left:70%;
+  transform: translate(-50%,-50%);
+  z-index:2;
+}
+#startButton img{
+  height:15vw;
+  width:15vw;
+}
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+      position: relative;
+  }
+
+  .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+  }
+
+  .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: center;
+  }
+}
+@media screen and (max-width: 800px) {
+  #startButton{
+    top:35%;
+    left:50%;
+  }
+  .Description{
+    color:white;
+    position:absolute;
+    width:80vw;
+    top:50%;
+    left:10vw;
+    line-height: 4vh;
+    font-family: "Ubuntu", sans-serif;
+  }
+  #startButton img{
+    height:45vw;
+    width:45vw;
+  }
 }

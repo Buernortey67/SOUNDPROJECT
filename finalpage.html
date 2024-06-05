@@ -73,10 +73,10 @@
 
         /* Styling for the video section */
         #video {
-            margin-top: 60vh; /* gap between header and video */
-            text-align: center;
             background-color: transparent; 
             position:relative;
+            left:20vw;
+            top:60vh;
         }
 
         .video-container {
@@ -155,26 +155,37 @@
             width: 20px; 
             height: auto;
         }
+        section{
+            position:relative;
+            min-height:100vh;
+            width:100%;
+        }
+        .contact{
+            position:relative;
+            top:50vh;
+        }
     </style>
 </head>
 
 <body>
-    <div class="topnav" id="myTopnav">
-        <a href="index.html">Home</a>
-        <a href="audio.html">Audio</a>
-        <a href="finalpage.html" class="active">Behind The Scenes</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
-     </div>
-
-    <div id="video">
-        <div class="video-container">
-           <iframe width="560" height="315" src="https://www.youtube.com/embed/VboLbchT-Qw?si=h5zPjHWz55Slk8K_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <section>
+        <div class="topnav" id="myTopnav">
+            <a href="index.html">Home</a>
+            <a href="audio.html">Audio</a>
+            <a href="finalpage.html" class="active">Behind The Scenes</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+         </div>
+    
+        <div id="video">
+            <div class="video-container">
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/VboLbchT-Qw?si=h5zPjHWz55Slk8K_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <footer>
+    <section class="contact">
         <div class="team-section" id="section">
             <div class="team-members">
                 <div class="team-member">
@@ -212,7 +223,7 @@
                 <!-- Add other team members similarly -->
             </div>
         </div>
-    </footer>
+    </section>
 
 </body>
 
