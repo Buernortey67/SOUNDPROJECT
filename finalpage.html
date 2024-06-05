@@ -103,18 +103,24 @@
         /* Styling for the team section */
         .team-section {
             text-align: center;
-            margin-top: auto; /* Push to the bottom */
-            margin-bottom: 20px; /* Add some space */
+            margin-top: 50px; /* Add space between header and video */
+            margin-bottom: 50px; /* Add space between video and footer */
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            width: 100%;
+            position: relative;
+            z-index: 1;
         }
 
         .team-members {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
+            margin-top: 20px; /* Add space between header and team members */
         }
 
         .team-member {
-            width: 200px; /* Adjust as needed */
+            width: 100px; /* Adjust as needed */
             margin-bottom: 20px; /* Adjust as needed */
             text-align: center;
         }
@@ -128,7 +134,7 @@
 
         .team-member p {
             margin-top: 10px;
-            font-size: 18px;
+            font-size: 14px;
             color: #ffffff;
         }
 
@@ -141,14 +147,16 @@
         }
 
         .contact-icons img {
-            width: 30px; /* Adjust as needed */
+            width: 20px; /* Adjust as needed */
             height: auto;
         }
 
         /* Styling for the video section */
         #video {
-            margin-top: 50px; /* Adjust as needed */
+            margin-top: 50px; /* Add space between header and video */
             text-align: center;
+            position: relative;
+            z-index: 1;
         }
 
         .video-container {
@@ -161,6 +169,17 @@
         .video-container iframe {
             width: 100%;
             height: 100%;
+        }
+
+        /* Styling for the footer */
+        footer {
+            width: 100%;
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
         }
     </style>
 </head>
@@ -225,6 +244,11 @@
             <!-- Add other team members similarly -->
         </div>
     </div>
+
+    <footer>
+        <!-- Add any footer content here -->
+        <p>© 2024 All Rights Reserved</p>
+    </footer>
 
 </body>
 
