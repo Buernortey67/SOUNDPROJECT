@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Last Page</title>
-    
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
     <style>
@@ -127,13 +127,26 @@
         }
 
         /* Styling for the team section */
-        .team-section {
-            text-align: center;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-            width: 100%;
-            position: relative;
-            z-index: 1;
+       /* Styling for the team member images */
+.team-member img {
+    width: 80px; /* Reduced size */
+    height: 80px; /* Reduced size */
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 128, 0.5); /* Apply blue black color around the images */
+}
+
+/* Styling for the team section */
+.team-section {
+    text-align: center;
+    padding: 20px;
+    background-color: transparent; /* Remove semi-transparent background */
+    position: fixed; /* Fix the position of the team section */
+    bottom: 0; /* Align the team section to the bottom */
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 128, 0.5); /* Apply blue black color around the team section */
+}
+
         }
 
         .team-members {
@@ -150,11 +163,8 @@
             text-align: center;
         }
 
-        .team-member img {
-            width: 100%;
-            height: auto;
-            border-radius: 50%;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        
+;
         }
 
         .team-member p {
