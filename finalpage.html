@@ -96,17 +96,18 @@
         /* Styling for the video section */
         #video {
             text-align: center;
-            background-color: transparent; /* Remove blue box background */
+            background-color: transparent;
+            margin-top: 20vh; /* Adjust the gap between header and video */
         }
 
         .video-container {
             width: 90%;
-            max-width: 800px; /* Limit maximum width */
-            height: 50vh; /* Adjust the video height as needed */
-            max-height: 400px; /* Limit maximum height */
+            max-width: 800px;
+            height: 50vh;
+            max-height: 400px;
             overflow: hidden;
             position: relative;
-            margin-top: 20px; /* Adjust the gap between header and video */
+            margin: auto; /* Center the video container horizontally */
         }
 
         .video-container iframe {
@@ -120,19 +121,19 @@
             width: 100%;
             background-color: transparent;
             text-align: center;
-            padding: 40px 20px; /* Increase padding for more space */
+            padding: 40px 20px;
             position: relative;
             z-index: 1;
-            margin-top: 0; /* Adjust the gap between video and footer */
+            margin-top: 0;
         }
 
         /* Styling for the team section */
         .team-section {
             text-align: center;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            background-color: rgba(0, 0, 0, 0.5);
             width: 100%;
-            position: fixed; /* Fix the position of the team section */
+            position: absolute;
             bottom: 0; /* Align the team section to the bottom */
             z-index: 1;
         }
@@ -141,21 +142,21 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            margin-top: 20px; /* Add space between header and team members */
-            margin-bottom: 20px; /* Add space between team members and footer */
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
 
         .team-member {
-            width: 100px; /* Adjust as needed */
-            margin-bottom: 20px; /* Adjust as needed */
+            width: 100px;
+            margin-bottom: 20px;
             text-align: center;
         }
 
         .team-member img {
-            width: 80px; /* Adjust the size of team member images */
-            height: 80px; /* Adjust the size of team member images */
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
-            box-shadow: 0 0 10px rgba(0, 0, 128, 0.5); /* Apply blue-black color around the images */
+            box-shadow: 0 0 10px rgba(0, 0, 128, 0.5);
         }
 
         .team-member p {
@@ -165,7 +166,7 @@
         }
 
         .contact-icons {
-            margin-top: 10px; /* Adjust as needed */
+            margin-top: 10px;
         }
 
         .contact-icons a {
@@ -173,7 +174,7 @@
         }
 
         .contact-icons img {
-            width: 20px; /* Adjust as needed */
+            width: 20px;
             height: auto;
         }
     </style>
