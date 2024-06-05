@@ -24,3 +24,25 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 1000); // 1000ms matches the CSS transition duration
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var backgroundAudio = document.getElementById('backgroundAudio');
+    
+    // Add event listener for when the audio finishes playing
+    backgroundAudio.addEventListener('ended', function() {
+        // Redirect to audio.html after audio finishes playing
+        window.location.href = 'audio.html';
+    });
+
+    // Play the background audio
+    backgroundAudio.play();
+});
+
+// In audio.html
+document.addEventListener('DOMContentLoaded', function() {
+    var backgroundAudio = document.getElementById('backgroundAudio');
+
+    // Play the background audio
+    backgroundAudio.play();
+});
+
